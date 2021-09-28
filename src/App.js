@@ -1,8 +1,8 @@
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import Start from "./Pages/Start";
-import Play from "./Pages/Play";
-import NotFound from "./Pages/NotFound";
+import Start from "./pages/Start";
+import Play from "./pages/Play";
+import NotFound from "./pages/NotFound";
 import "./App.css";
 
 const App = () => {

@@ -10,16 +10,15 @@ const Board = () => {
     for (let j = 0; j < verticalAxis.length; j++) {
       board.push(
         <div className="tile">
-          [{horizontalAxis[i]},
-          {verticalAxis[j]}]
+          [{horizontalAxis[i]},{verticalAxis[j]}]
         </div>
       );
     }
   }
 
   return (
-    <div className="board">
-        {board}
+    <div>
+      <div className="board">{board}</div>
     </div>
   );
 };
