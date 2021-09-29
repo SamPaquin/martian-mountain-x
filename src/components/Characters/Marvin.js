@@ -1,6 +1,6 @@
 import {Character} from "./Character";
 
-export class BugsBunny extends Character {
+export class Marvin extends Character {
     constructor(name, positionX, positionY) {
         super(name, positionX, positionY);
     }
@@ -13,4 +13,13 @@ export class BugsBunny extends Character {
             return false
         }
     }
+
+    // stealCarrot(martianPositionX, martianPositionY, otherCharX, otherCharY) {
+    //     if ((martianPositionX == otherCharX) && (martianPositionY == otherCharY)) {
+    //         return true;
+    //     }
+    //     else {
+    //         return false;
+    //     }
+    // }
 }

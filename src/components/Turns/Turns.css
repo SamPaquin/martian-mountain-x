@@ -1,8 +1,0 @@
-.turns {
-    display: flex;
-    flex-direction: column;
-}
-
-.turns button {
-    width: auto;
-}
