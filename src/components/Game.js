@@ -1,21 +1,46 @@
 import { useState } from "react";
 
-const TurnCycle = () => {
+import Bugs_Carrot from "../images/Bugs_Carrot.png";
+import Bugs_NoCarrot from "../images/Bugs_NoCarrot.png";
+import Carrot from "../images/Carrot.png";
+import Marvin_Carrot from "../images/Marvin_Carrot.png";
+import Marvin_NoCarrot from "../images/Marvin_NoCarrot.png";
+import Mountain from "../images/Mountain.png";
+import Taz_Carrot from "../images/Taz_Carrot.png";
+import Taz_NoCarrot from "../images/Taz_NoCarrot.png";
+import Tweety_Carrot from "../images/Tweety_Carrot.png";
+import Tweety_NoCarrot from "../images/Tweety_NoCarrot.png";
+
+import "./Game.css";
+
+const Game = () => {
   // Starting positions
   let [BugsPositionX, setBugsPositionX] = useState(1);
   let [BugsPositionY, setBugsPositionY] = useState(1);
+
   let [TweetyPositionX, setTweetyPositionX] = useState(1);
   let [TweetyPositionY, setTweetyPositionY] = useState(5);
+
   let [TazPositionX, setTazPositionX] = useState(5);
   let [TazPositionY, setTazPositionY] = useState(1);
+
   let [MarvinPositionX, setMarvinPositionX] = useState(5);
   let [MarvinPositionY, setMarvinPositionY] = useState(5);
 
+  let [MountainPositionX, setMountainPositionX] = useState(3);
+  let [MountianPositionY, setMountainPositionY] = useState(3);
+
+  let [Carrot1PositionX] = useState(3);
+  let [Carrot1PositionY] = useState(1);
+
+  let [Carrot2PositionX] = useState(3);
+  let [Carrot2PositionY] = useState(5);
+
   // Setting turn counters
-  let [BugsTurnCounter, setBugsTurnCounter] = useState(1);
-  let [TweetyTurnCounter, setTweetyTurnCounter] = useState(1);
-  let [TazTurnCounter, setTazTurnCounter] = useState(1);
-  let [MarvinTurnCounter, setMarvinTurnCounter] = useState(1);
+  let [BugsTurnCounter, setBugsTurnCounter] = useState(0);
+  let [TweetyTurnCounter, setTweetyTurnCounter] = useState(0);
+  let [TazTurnCounter, setTazTurnCounter] = useState(0);
+  let [MarvinTurnCounter, setMarvinTurnCounter] = useState(0);
 
   // Turn increment functions
   const incrementBugsTurnCounter = () =>
@@ -26,9 +51,81 @@ const TurnCycle = () => {
   const incrementMarvinTurnCounter = () =>
     setMarvinTurnCounter(MarvinTurnCounter + 1);
 
-  const booleanMoveXY = Math.random() < 0.5; //Random boolean for all character movements
+  // Setting up Board
+  const horizontalAxis = [1, 2, 3, 4, 5];
+  const verticalAxis = [1, 2, 3, 4, 5];
+
+  let board = [];
+
+  // Placing Players and Items on Board, setting empty tiles
+
+  for (let i = 0; i < horizontalAxis.length; i++) {
+    for (let j = 0; j < verticalAxis.length; j++) {
+      if (
+        BugsPositionX === horizontalAxis[i] &&
+        BugsPositionY === verticalAxis[j]
+      ) {
+        board.push(
+          <div className="tile">
+            {<img src={Bugs_NoCarrot} alt="Bugs Bunny" id="bugs-image" />}
+          </div>
+        );
+      } else if (
+        TweetyPositionX === horizontalAxis[i] &&
+        TweetyPositionY === verticalAxis[j]
+      ) {
+        board.push(
+          <div className="tile">
+            {<img src={Tweety_NoCarrot} alt="Tweety" id="tweety-image" />}
+          </div>
+        );
+      } else if (
+        TazPositionX === horizontalAxis[i] &&
+        TazPositionY === verticalAxis[j]
+      ) {
+        board.push(
+          <div className="tile">{<img src={Taz_NoCarrot} alt="Taz" id="taz-image" />}</div>
+        );
+      } else if (
+        MarvinPositionX === horizontalAxis[i] &&
+        MarvinPositionY === verticalAxis[j]
+      ) {
+        board.push(
+          <div className="tile">
+            {<img src={Marvin_NoCarrot} alt="Marvin Martian" id="marvin-image" />}
+          </div>
+        );
+      } else if (
+        MountainPositionX === horizontalAxis[i] &&
+        MountianPositionY === verticalAxis[j]
+      ) {
+        board.push(
+          <div className="tile">{<img src={Mountain} alt="Mountain" id="mountain-image" />}</div>
+        );
+      } else if (
+        Carrot1PositionX === horizontalAxis[i] &&
+        Carrot1PositionY === verticalAxis[j]
+      ) {
+        board.push(
+          <div className="tile">{<img src={Carrot} alt="Carrot" className="carrot-image" />}</div>
+        );
+      } else if (
+        Carrot2PositionX === horizontalAxis[i] &&
+        Carrot2PositionY === verticalAxis[j]
+      ) {
+        board.push(
+          <div className="tile">{<img src={Carrot} alt="Carrot" className="carrot-image" />}</div>
+        );
+      } else {
+        board.push(<div className="tile">{}</div>);
+      }
+    }
+  }
 
   // Character Movements
+
+  const booleanMoveXY = Math.random() < 0.5; //Random boolean for all character movements
+
   const BugsMovement = () => {
     if (booleanMoveXY === true) {
       if (BugsPositionX === 1) {
@@ -157,24 +254,7 @@ const TurnCycle = () => {
     }
   };
 
-  // Logging positions to the console
-  console.log("Bugs");
-  console.log("Turn: " + BugsTurnCounter);
-  console.log("Position: [" + BugsPositionX, BugsPositionY + "]");
-
-  console.log("Tweety");
-  console.log("Turn: " + TweetyTurnCounter);
-  console.log("Position: [" + TweetyPositionX, TweetyPositionY + "]");
-
-  console.log("Taz");
-  console.log("Turn: " + TazTurnCounter);
-  console.log("Position: [" + TazPositionX, TazPositionY + "]");
-
-  console.log("Marvin");
-  console.log("Turn: " + MarvinTurnCounter);
-  console.log("Position: [" + MarvinPositionX, MarvinPositionY + "]");
-
-  // Generating Accurate Turn Button with onClick event listener
+  // Turn Button Updating Turn Counters
   const TurnButton = () => {
     if (BugsTurnCounter > TweetyTurnCounter) {
       return (
@@ -223,19 +303,29 @@ const TurnCycle = () => {
     }
   };
 
-  // End of cycle functions
+  // End of 3 turn cycle functions
   if (MarvinTurnCounter === 3) {
     setBugsTurnCounter(BugsTurnCounter - 2);
     setTweetyTurnCounter(TweetyTurnCounter - 2);
     setTazTurnCounter(TazTurnCounter - 2);
     setMarvinTurnCounter(MarvinTurnCounter - 2);
+
+    // Mounatin Moves
+    setMountainPositionX(MountainPositionX + 1);
+    setMountainPositionY(MountianPositionY + 1);
   }
 
+  console.log("Bugs: " + BugsTurnCounter);
+  console.log("Tweety: " + TweetyTurnCounter);
+  console.log("Taz: " + TazTurnCounter);
+  console.log("Marvin: " + MarvinTurnCounter);
+
   return (
-    <div className="turns">
+    <div className="game">
       <TurnButton />
+      <div className="board">{board}</div>
     </div>
   );
 };
 
-export default TurnCycle;
+export default Game;

@@ -5,6 +5,16 @@
 }
 
 .play button {
+    height: 25px;
     width: 200px;
-    margin: 20px;
+    margin: 20px 0;
+    background-color: #334aac;
+    border-radius: 4px;
+    border: none;
+    COLOR: white;
+}
+
+.play button:hover {
+    cursor: pointer;
+    background-color: lightseagreen;
 }

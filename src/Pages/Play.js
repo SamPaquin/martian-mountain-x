@@ -1,12 +1,10 @@
-import Board from "../components/Board";
-import TurnCycle from "../components/TurnCycle";
+import Game from "../components/Game";
 import "./Play.css";
 
 const Play = () => {
   return (
     <div className="play">
-      <TurnCycle />
-      <Board />
+      <Game />
       <button>Quit</button>
     </div>
   );

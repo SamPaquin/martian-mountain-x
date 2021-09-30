@@ -1,0 +1,42 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 160px);
+  grid-template-rows: repeat(5, 160px);
+  width: 800px;
+  height: 800px;
+  background-color: lightblue;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 159px;
+  height: 159px;
+  border: 1px solid black;
+}
+
+#tweety-image,
+#taz-image,
+#marvin-image {
+  width: 180px;
+}
+
+#bugs-image {
+  width: 80px;
+}
+
+#mountain-image {
+  width: 150px;
+}
+
+.carrot-image {
+  width: 100px;
+}
+
