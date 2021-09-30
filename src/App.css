@@ -24,3 +24,8 @@ button {
     border: none;
     color: white;
 }
+
+button:hover {
+    cursor: pointer;
+    background-color: lightseagreen;
+}
