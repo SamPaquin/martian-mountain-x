@@ -67,7 +67,13 @@ const Game = () => {
       ) {
         board.push(
           <div className="tile">
-            {<img src={Bugs_NoCarrot} alt="Bugs Bunny" id="bugs-image" />}
+            {
+              <img
+                src={Bugs_NoCarrot}
+                alt="Bugs Bunny"
+                className="bugs-image"
+              />
+            }
           </div>
         );
       } else if (
@@ -84,7 +90,9 @@ const Game = () => {
         TazPositionY === verticalAxis[j]
       ) {
         board.push(
-          <div className="tile">{<img src={Taz_NoCarrot} alt="Taz" id="taz-image" />}</div>
+          <div className="tile">
+            {<img src={Taz_NoCarrot} alt="Taz" id="taz-image" />}
+          </div>
         );
       } else if (
         MarvinPositionX === horizontalAxis[i] &&
@@ -92,7 +100,13 @@ const Game = () => {
       ) {
         board.push(
           <div className="tile">
-            {<img src={Marvin_NoCarrot} alt="Marvin Martian" id="marvin-image" />}
+            {
+              <img
+                src={Marvin_NoCarrot}
+                alt="Marvin Martian"
+                id="marvin-image"
+              />
+            }
           </div>
         );
       } else if (
@@ -100,21 +114,27 @@ const Game = () => {
         MountianPositionY === verticalAxis[j]
       ) {
         board.push(
-          <div className="tile">{<img src={Mountain} alt="Mountain" id="mountain-image" />}</div>
+          <div className="tile">
+            {<img src={Mountain} alt="Mountain" id="mountain-image" />}
+          </div>
         );
       } else if (
         Carrot1PositionX === horizontalAxis[i] &&
         Carrot1PositionY === verticalAxis[j]
       ) {
         board.push(
-          <div className="tile">{<img src={Carrot} alt="Carrot" className="carrot-image" />}</div>
+          <div className="tile">
+            {<img src={Carrot} alt="Carrot" className="carrot-image" />}
+          </div>
         );
       } else if (
         Carrot2PositionX === horizontalAxis[i] &&
         Carrot2PositionY === verticalAxis[j]
       ) {
         board.push(
-          <div className="tile">{<img src={Carrot} alt="Carrot" className="carrot-image" />}</div>
+          <div className="tile">
+            {<img src={Carrot} alt="Carrot" className="carrot-image" />}
+          </div>
         );
       } else {
         board.push(<div className="tile">{}</div>);
@@ -253,6 +273,26 @@ const Game = () => {
       }
     }
   };
+
+  // Pickup Carrot
+
+  if (
+    (BugsPositionX === Carrot1PositionX &&
+      BugsPositionY === Carrot1PositionY) ||
+    (BugsPositionX === Carrot2PositionX && BugsPositionY === Carrot2PositionY)
+  ) {
+    board.push(
+      <div className="tile">
+        {
+          <img
+            src={Bugs_Carrot}
+            alt="Bugs with Carrot"
+            className="bugs-image"
+          />
+        }
+      </div>
+    );
+  }
 
   // Turn Button Updating Turn Counters
   const TurnButton = () => {
