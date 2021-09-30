@@ -14,25 +14,21 @@ import Tweety_NoCarrot from "../images/Tweety_NoCarrot.png";
 import "./Game.css";
 
 const Game = () => {
-  // Starting positions
+  // Starting Character Positions
   let [BugsPositionX, setBugsPositionX] = useState(1);
   let [BugsPositionY, setBugsPositionY] = useState(1);
-
   let [TweetyPositionX, setTweetyPositionX] = useState(1);
   let [TweetyPositionY, setTweetyPositionY] = useState(5);
-
   let [TazPositionX, setTazPositionX] = useState(5);
   let [TazPositionY, setTazPositionY] = useState(1);
-
   let [MarvinPositionX, setMarvinPositionX] = useState(5);
   let [MarvinPositionY, setMarvinPositionY] = useState(5);
 
+  // Starting Carrot and Mountain Positions
   let [MountainPositionX, setMountainPositionX] = useState(3);
   let [MountianPositionY, setMountainPositionY] = useState(3);
-
   let [Carrot1PositionX] = useState(3);
   let [Carrot1PositionY] = useState(1);
-
   let [Carrot2PositionX] = useState(3);
   let [Carrot2PositionY] = useState(5);
 
@@ -351,8 +347,8 @@ const Game = () => {
     setMarvinTurnCounter(MarvinTurnCounter - 2);
 
     // Mounatin Moves
-    setMountainPositionX(MountainPositionX + 1);
-    setMountainPositionY(MountianPositionY + 1);
+    setMountainPositionX(MountainPositionX = (Math.floor(Math.random() * (5 - 1 + 1) + 1)));
+    setMountainPositionY(MountianPositionY = (Math.floor(Math.random() * (5 - 1 + 1) + 1)));
   }
 
   console.log("Bugs: " + BugsTurnCounter);
