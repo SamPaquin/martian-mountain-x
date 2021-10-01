@@ -32,11 +32,15 @@
   width: 80px;
 }
 
+.bugs-flag-image {
+  width: 140px;
+}
+
 #mountain-image {
   width: 150px;
 }
 
-.carrot-image {
-  width: 100px;
+.flag-image {
+  width: 125px;
 }
 
