@@ -22,9 +22,9 @@
   border: 1px solid black;
 }
 
-#tweety-image,
-#taz-image,
-#marvin-image {
+.tweety-image,
+.taz-image,
+.marvin-image {
   width: 180px;
 }
 

@@ -10,7 +10,6 @@ import Taz_Carrot from "../images/Taz_Carrot.png";
 import Taz_NoCarrot from "../images/Taz_NoCarrot.png";
 import Tweety_Carrot from "../images/Tweety_Carrot.png";
 import Tweety_NoCarrot from "../images/Tweety_NoCarrot.png";
-
 import "./Game.css";
 
 const Game = () => {
@@ -78,7 +77,7 @@ const Game = () => {
       ) {
         board.push(
           <div className="tile">
-            {<img src={Tweety_NoCarrot} alt="Tweety" id="tweety-image" />}
+            {<img src={Tweety_NoCarrot} alt="Tweety" className="tweety-image" />}
           </div>
         );
       } else if (
@@ -87,7 +86,7 @@ const Game = () => {
       ) {
         board.push(
           <div className="tile">
-            {<img src={Taz_NoCarrot} alt="Taz" id="taz-image" />}
+            {<img src={Taz_NoCarrot} alt="Taz" className="taz-image" />}
           </div>
         );
       } else if (
@@ -100,7 +99,7 @@ const Game = () => {
               <img
                 src={Marvin_NoCarrot}
                 alt="Marvin Martian"
-                id="marvin-image"
+                className="marvin-image"
               />
             }
           </div>
@@ -289,6 +288,60 @@ const Game = () => {
       </div>
     );
   }
+  
+  if (
+    (TweetyPositionX === Carrot1PositionX &&
+      TweetyPositionY === Carrot1PositionY) ||
+    (TweetyPositionX === Carrot2PositionX && TweetyPositionY === Carrot2PositionY)
+  ) {
+    board.push(
+      <div className="tile">
+        {
+          <img
+            src={Tweety_Carrot}
+            alt="Tweety with Carrot"
+            className="tweety-image"
+          />
+        }
+      </div>
+    );
+  }
+  
+  if (
+    (TazPositionX === Carrot1PositionX &&
+      TazPositionY === Carrot1PositionY) ||
+    (TazPositionX === Carrot2PositionX && TazPositionY === Carrot2PositionY)
+  ) {
+    board.push(
+      <div className="tile">
+        {
+          <img
+            src={Taz_Carrot}
+            alt="Taz with Carrot"
+            className="taz-image"
+          />
+        }
+      </div>
+    );
+  }
+  
+  if (
+    (MarvinPositionX === Carrot1PositionX &&
+      MarvinPositionY === Carrot1PositionY) ||
+    (MarvinPositionX === Carrot2PositionX && MarvinPositionY === Carrot2PositionY)
+  ) {
+    board.push(
+      <div className="tile">
+        {
+          <img
+            src={Marvin_Carrot}
+            alt="Marvin with Carrot"
+            className="marvin-image"
+          />
+        }
+      </div>
+    );
+  }
 
   // Turn Button Updating Turn Counters
   const TurnButton = () => {
@@ -347,20 +400,70 @@ const Game = () => {
     setMarvinTurnCounter(MarvinTurnCounter - 2);
 
     // Mounatin Moves
-    setMountainPositionX(MountainPositionX = (Math.floor(Math.random() * (5 - 1 + 1) + 1)));
-    setMountainPositionY(MountianPositionY = (Math.floor(Math.random() * (5 - 1 + 1) + 1)));
+    setMountainPositionX(
+      (MountainPositionX = Math.floor(Math.random() * (5 - 1 + 1) + 1))
+    );
+    setMountainPositionY(
+      (MountianPositionY = Math.floor(Math.random() * (5 - 1 + 1) + 1))
+    );
   }
 
-  console.log("Bugs: " + BugsTurnCounter);
-  console.log("Tweety: " + TweetyTurnCounter);
-  console.log("Taz: " + TazTurnCounter);
-  console.log("Marvin: " + MarvinTurnCounter);
+  //Death
+  if (MarvinPositionX === BugsPositionX && MarvinPositionY === BugsPositionY) {
+    setBugsPositionX(BugsPositionX = 0);
+    setBugsPositionY(BugsPositionY = 0);
+  }
+
+  if (MarvinPositionX === TweetyPositionX && MarvinPositionY === TweetyPositionY) {
+    setBugsPositionX(TweetyPositionX = 0);
+    setBugsPositionY(TweetyPositionY = 0);
+  }
+
+  if (MarvinPositionX === BugsPositionX && TazPositionX === TazPositionY) {
+    setBugsPositionX(TazPositionX = 0);
+    setBugsPositionY(TazPositionY = 0);
+  }
+
+  // Victory
+  const Victory = () => {};
+
+  if (
+    BugsPositionX === MountainPositionX &&
+    BugsPositionY === MountianPositionY
+  ) {
+    <Victory />;
+    console.log("Bugs is victorious!");
+  }
+
+  if (
+    TweetyPositionX === MountainPositionX &&
+    TweetyPositionY === MountianPositionY
+  ) {
+    <Victory />;
+    console.log("Tweety is victorious!");
+  }
+
+  if (
+    TazPositionX === MountainPositionX &&
+    TazPositionY === MountianPositionY
+  ) {
+    <Victory />;
+    console.log("Taz is victorious!");
+  }
+
+  if (
+    MarvinPositionX === MountainPositionX &&
+    MarvinPositionY === MountianPositionY
+  ) {
+    <Victory />;
+    console.log("Martian is victorious!");
+  }
 
   return (
-    <div className="game">
-      <TurnButton />
-      <div className="board">{board}</div>
-    </div>
+      <div className="game">
+        <TurnButton />
+        <div className="board">{board}</div>
+      </div>
   );
 };
 
