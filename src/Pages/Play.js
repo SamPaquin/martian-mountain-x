@@ -1,13 +1,12 @@
-import { Link } from "react-router-dom";
-
 import Game from "../components/Game";
-import "./Play.css";
+import Rules from "../components/Rules";
+import "./Styles/Play.css";
 
 const Play = () => {
   return (
     <div className="play">
+      <Rules />
       <Game />
-      <Link to="/start"><button>Quit</button></Link>
     </div>
   );
 };

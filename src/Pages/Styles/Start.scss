@@ -1,0 +1,69 @@
+@import "../../Sass/App.scss";
+
+.start-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.start-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 700px;
+  background-color: $martianred;
+  padding: 2rem 3rem;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.start-container img {
+  width: 45%;
+}
+
+.start-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+}
+
+.start-content h1 {
+    font-family: 'Alegreya', serif;
+    font-size: 50px;
+    color: $white;
+}
+
+.start-content-text {
+    font-size: 20px;
+    margin: 10px 0;
+    color: $white;
+}
+
+.start-content button {
+    background-color: transparent;
+    border: 1px solid $martiangold;
+    border-radius: 4px;
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px;
+    margin: 20px 0;
+
+}
+
+.start-content button:hover {
+    cursor: pointer;
+    background-color: $martiangold;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.start-content button a {
+  text-decoration: none;
+  color: white;
+}
+

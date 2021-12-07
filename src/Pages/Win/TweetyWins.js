@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-import Tweety_Carrot from "../images/Tweety_Carrot.png";
-import "./Wins.css";
+import Tweety_Carrot from "../../images/Tweety_Carrot.png";
+import "./Styles/Win.css";
 
 const TweetyWins = () => {
   return (

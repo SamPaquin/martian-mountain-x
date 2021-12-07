@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 import Bugs_NoCarrot from "../images/Bugs_NoCarrot.png";
 import Bugs_Flag from "../images/Bugs_Flag.png";
 import Flag from "../images/Flag.png";
@@ -12,7 +11,7 @@ import Taz_Flag from "../images/Taz_Flag.png";
 import Tweety_NoCarrot from "../images/Tweety_NoCarrot.png";
 import Tweety_Flag from "../images/Tweety_Flag.png";
 
-import "./Game.css";
+import "./Styles/Game.css";
 
 const Game = () => {
   // Starting Character Positions
@@ -385,7 +384,7 @@ const Game = () => {
               </div>
             );
           } else {
-            window.location.href= 'bugs-wins';
+            window.location.href = "bugs-wins";
             break;
           }
         }
@@ -419,7 +418,7 @@ const Game = () => {
               </div>
             );
           } else {
-            window.location.href= 'taz-wins';
+            window.location.href = "taz-wins";
             break;
           }
         }
@@ -447,7 +446,7 @@ const Game = () => {
               </div>
             );
           } else {
-            window.location.href= 'taz-wins';
+            window.location.href = "taz-wins";
             break;
           }
         }
@@ -481,7 +480,7 @@ const Game = () => {
               </div>
             );
           } else {
-            window.location.href= 'marvin-wins';
+            window.location.href = "marvin-wins";
             break;
           }
         }
@@ -524,6 +523,7 @@ const Game = () => {
       if (BugsTurnCounter > TweetyTurnCounter) {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementTweetyTurnCounter();
               TweetyMove();
@@ -535,6 +535,7 @@ const Game = () => {
       } else if (TweetyTurnCounter > TazTurnCounter) {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementTazTurnCounter();
               TazMove();
@@ -546,6 +547,7 @@ const Game = () => {
       } else if (TazTurnCounter > MarvinTurnCounter) {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementMarvinTurnCounter();
               MarvinMove();
@@ -557,6 +559,7 @@ const Game = () => {
       } else {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementBugsTurnCounter();
               BugMove();
@@ -570,6 +573,7 @@ const Game = () => {
       if (BugsTurnCounter > TazTurnCounter) {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementTazTurnCounter();
               TazMove();
@@ -581,6 +585,7 @@ const Game = () => {
       } else if (TazTurnCounter > MarvinTurnCounter) {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementMarvinTurnCounter();
               MarvinMove();
@@ -592,6 +597,7 @@ const Game = () => {
       } else {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementBugsTurnCounter();
               BugMove();
@@ -605,6 +611,7 @@ const Game = () => {
       if (TweetyTurnCounter > TazTurnCounter) {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementTazTurnCounter();
               TazMove();
@@ -616,6 +623,7 @@ const Game = () => {
       } else if (TazTurnCounter > MarvinTurnCounter) {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementMarvinTurnCounter();
               MarvinMove();
@@ -627,6 +635,7 @@ const Game = () => {
       } else {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementTweetyTurnCounter();
               TweetyMove();
@@ -640,6 +649,7 @@ const Game = () => {
       if (BugsTurnCounter > TweetyTurnCounter) {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementTweetyTurnCounter();
               TweetyMove();
@@ -651,6 +661,7 @@ const Game = () => {
       } else if (TweetyTurnCounter > MarvinTurnCounter) {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementMarvinTurnCounter();
               MarvinMove();
@@ -662,6 +673,7 @@ const Game = () => {
       } else {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementBugsTurnCounter();
               BugMove();
@@ -675,6 +687,7 @@ const Game = () => {
       if (BugsTurnCounter > MarvinTurnCounter) {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementMarvinTurnCounter();
               MarvinMove();
@@ -686,6 +699,7 @@ const Game = () => {
       } else {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementBugsTurnCounter();
               BugMove();
@@ -699,6 +713,7 @@ const Game = () => {
       if (TweetyTurnCounter > MarvinTurnCounter) {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementMarvinTurnCounter();
               MarvinMove();
@@ -710,6 +725,7 @@ const Game = () => {
       } else {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementTweetyTurnCounter();
               TweetyMove();
@@ -723,6 +739,7 @@ const Game = () => {
       if (TazTurnCounter > MarvinTurnCounter) {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementMarvinTurnCounter();
               MarvinMove();
@@ -734,6 +751,7 @@ const Game = () => {
       } else {
         return (
           <button
+            className="button"
             onClick={() => {
               incrementTazTurnCounter();
               TazMove();
@@ -760,10 +778,10 @@ const Game = () => {
 
   // End of 3 turn cycle functions
   if (MarvinTurnCounter === 3) {
-    setBugsTurnCounter(BugsTurnCounter - 2);
-    setTweetyTurnCounter(TweetyTurnCounter - 2);
-    setTazTurnCounter(TazTurnCounter - 2);
-    setMarvinTurnCounter(MarvinTurnCounter - 2);
+    setBugsTurnCounter(BugsTurnCounter - 3);
+    setTweetyTurnCounter(TweetyTurnCounter - 3);
+    setTazTurnCounter(TazTurnCounter - 3);
+    setMarvinTurnCounter(MarvinTurnCounter - 3);
 
     // Mounatin Moves
     setMountainPositionX(
@@ -800,8 +818,8 @@ const Game = () => {
 
   return (
     <div className="game">
-      <TurnButton />
       <div className="board">{board}</div>
+      <TurnButton />
     </div>
   );
 };

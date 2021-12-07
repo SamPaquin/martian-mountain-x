@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-import Bugs_Carrot from "../images/Bugs_Carrot.png";
-import "./Wins.css";
+import Bugs_Carrot from "../../images/Bugs_Carrot.png";
+import "./Styles/Win.css";
 
 const BugsWins = () => {
   return (

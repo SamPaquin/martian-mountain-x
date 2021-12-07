@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* a {
+  text-decoration: none;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #FFF;
+}
+
+.game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.board {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (160px)[5];
+      grid-template-columns: repeat(5, 160px);
+  -ms-grid-rows: (160px)[5];
+      grid-template-rows: repeat(5, 160px);
+  width: 800px;
+  height: 800px;
+}
+
+.tile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 159px;
+  height: 159px;
+  border: 1px solid #000;
+  background-color: #4ABDE7;
+}
+
+.tweety-image,
+.taz-image,
+.marvin-image {
+  width: 180px;
+}
+
+.bugs-image {
+  width: 80px;
+}
+
+.bugs-flag-image {
+  width: 140px;
+}
+
+#mountain-image {
+  width: 150px;
+}
+
+.flag-image {
+  width: 125px;
+}
+/*# sourceMappingURL=Game.css.map */

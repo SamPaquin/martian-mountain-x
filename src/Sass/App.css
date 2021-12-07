@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* a {
+  text-decoration: none;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #FFF;
+}
+
+button {
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #E3331C;
+  color: #E3331C;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 20px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #E3331C;
+  color: #FFF;
+}
+/*# sourceMappingURL=App.css.map */

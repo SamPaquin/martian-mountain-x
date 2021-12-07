@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* a {
+  text-decoration: none;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #FFF;
+}
+
+.start-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.start-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  max-width: 700px;
+  background-color: #E3331C;
+  padding: 2rem 3rem;
+  border-radius: 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.start-container img {
+  width: 45%;
+}
+
+.start-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 50%;
+}
+
+.start-content h1 {
+  font-family: 'Alegreya', serif;
+  font-size: 50px;
+  color: #FFF;
+}
+
+.start-content-text {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #FFF;
+}
+
+.start-content button {
+  background-color: transparent;
+  border: 1px solid #E8AA01;
+  border-radius: 4px;
+  color: white;
+  font-size: 20px;
+  padding: 10px 15px;
+  margin: 20px 0;
+}
+
+.start-content button:hover {
+  cursor: pointer;
+  background-color: #E8AA01;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.start-content button a {
+  text-decoration: none;
+  color: white;
+}
+/*# sourceMappingURL=Start.css.map */

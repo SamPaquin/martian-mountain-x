@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-import Marvin_Carrot from "../images/Marvin_Carrot.png";
-import "./Wins.css";
+import Marvin_Carrot from "../../images/Marvin_Carrot.png";
+import "./Styles/Win.css";
 
 const MarvinWins = () => {
   return (

@@ -1,0 +1,63 @@
+@import "../../Sass/App.scss";
+
+.rules-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: $martianred;
+}
+
+.rules-section h1 {
+    font-family: 'Alegreya', serif;
+    font-size: 40px;
+    color: $white;
+}
+
+.rules-section h2 {
+    font-size: 50px;
+    color: $white;
+}
+
+.rule {
+    font-size: 18px;
+    margin: 10px 0;
+    color: $white;
+}
+
+.rules-list {
+  list-style-type: none;
+}
+
+.rules-section-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+}
+
+.rules-section-buttons button {
+  background-color: transparent;
+  border: 1px solid $martiangold;
+  border-radius: 4px;
+  color: white;
+  font-size: 20px;
+  width: 150px;
+  height: 50px;
+  margin: 20px 10px;
+}
+
+.rules-section-buttons button:hover {
+  cursor: pointer;
+  background-color: $martiangold;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.rules-section-buttons button a {
+  text-decoration: none;
+  color: white;
+}

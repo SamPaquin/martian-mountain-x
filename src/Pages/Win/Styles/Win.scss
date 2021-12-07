@@ -1,0 +1,27 @@
+@import "../../../Sass/App.scss";
+
+.victory-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bugs-image {
+  width: 200px;
+  margin: 20px;
+}
+
+#tweety-image {
+  width: 350px;
+  margin: 20px;
+}
+
+#taz-image {
+  width: 350px;
+  margin: 20px;
+}
+
+#marvin-image {
+  width: 250px;
+  margin: 20px;
+}

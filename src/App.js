@@ -2,13 +2,12 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 import Start from "./pages/Start";
 import Play from "./pages/Play";
-import BugsWins from "./pages/BugsWins";
-import TweetyWins from "./pages/TweetyWins";
-import TazWins from "./pages/TazWins";
-import MarvinWins from "./pages/MarvinWins";
+import BugsWins from "./pages/Win/BugsWins";
+import TweetyWins from "./pages/Win/TweetyWins";
+import TazWins from "./pages/Win/TazWins";
+import MarvinWins from "./pages/Win/MarvinWins";
 import NotFound from "./pages/NotFound";
-import "./App.css";
-
+import "./Sass/App.css";
 
 const App = () => {
   return (

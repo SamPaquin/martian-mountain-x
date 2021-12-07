@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-import Taz_Carrot from "../images/Taz_Carrot.png";
-import "./Wins.css";
+import Taz_Carrot from "../../images/Taz_Carrot.png";
+import "./Styles/Win.css";
 
 const TazWins = () => {
   return (

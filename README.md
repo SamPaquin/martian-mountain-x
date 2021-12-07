@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Martian Mountain X
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created using HTML, CSS/SASS, and React (JavaScript).
 
 ## Available Scripts
 
